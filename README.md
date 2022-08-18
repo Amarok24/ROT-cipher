@@ -1,4 +1,4 @@
-# ROT-cipher
+# RotEncode: an enhanced ROT cipher
 ROT47 cipher with extra features (custom ASCII range and rotation), which allow some other cipher implementations, for example the Caesar cipher.
 
 [ROT cipher on Wikipedia](https://en.wikipedia.org/wiki/ROT13)
