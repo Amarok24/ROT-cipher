@@ -14,8 +14,8 @@
  * with printable ASCII characters. A ROT cipher should be self-reciprocal,
  * which means encoding & decoding is done with the same method.
  */
-public class RotEncode {
-
+public class RotEncode
+{
 	private int rangeFrom;
 	private int rangeTo;
 	private int rotateBy;
@@ -27,7 +27,8 @@ public class RotEncode {
 	 * @param rotateBy
 	 *          Rotate by this number of characters.
 	 */
-	public RotEncode(int rotateBy) {
+	public RotEncode(int rotateBy)
+	{
 		// Default ROT47 range is the full printable ASCII range 32..126 w/out 32
 		rangeFrom			= 33;
 		rangeTo				= 126;
@@ -42,7 +43,8 @@ public class RotEncode {
 	 * @param rotateBy
 	 *          Rotate by this number of characters.
 	 */
-	public RotEncode(int rangeFrom, int rangeTo, int rotateBy) {
+	public RotEncode(int rangeFrom, int rangeTo, int rotateBy)
+	{
 		if((rangeFrom < 32 || rangeTo > 126) || rangeFrom >= rangeTo) {
 			throw new Error("Given ROT range is invalid, must be between 32 and 126.");
 		}
@@ -54,7 +56,8 @@ public class RotEncode {
 	/**
 	 * The direction of rotation is always to the right.
 	 */
-	String rotate(String input) throws Error {
+	String rotate(String input) throws Error
+	{
 		StringBuilder result = new StringBuilder(input.length());
 		int upperOverflow = rangeTo + 1;
 		int charCode;
